@@ -42,8 +42,7 @@
         console.log(wLocation.replace(base, "/", wLocation));
         window.location = origin + base;
       } else {
-        localStorage.setItem("restore", "https://kristy-user.github.io/404");
-        console.log(wLocation.replace(base, "/", wLocation));
+        localStorage.setItem("restore", `${origin}/404`);
         window.location = origin + base;
       }
     </script>
