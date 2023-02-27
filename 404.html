@@ -18,7 +18,7 @@
   >
     <script>
       const wLocation = window.location.href;
-      const base = "/rs-clon/";
+      const base = "/rs-clone/";
       const {origin, pathname} = new URL(wLocation);
 
       const validPaths = [
@@ -42,7 +42,11 @@
         console.log(origin + base);
         window.location = origin + base;
       } else {
-        console.log(404404);
+        localStorage.setItem(
+          "restore",
+          wLocation.replace(base, "/", wLocation)
+        );
+        console.log(origin + path);
         window.location = origin + path;
       }
     </script>
